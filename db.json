@@ -1,0 +1,103 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"img": "/database/meat_bomb.jpg",
+			"name": "Мясная бомба",
+			"price": 689,
+			"weight": 520,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "burger"
+		},
+		{
+			"id": 2,
+			"img": "/database/burger_cheese.jpg",
+			"name": "Супер сырный",
+			"price": 550,
+			"weight": 512,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "burger"
+		},
+		{
+			"id": 3,
+			"img": "/database/satisfying.jpg",
+			"name": "Сытный",
+			"price": 639,
+			"weight": 580,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "burger"
+		},
+		{
+			"id": 4,
+			"img": "/database/heavy_hit.jpg",
+			"name": "Тяжелый удар",
+			"price": 480,
+			"weight": 470,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "burger"
+		},
+		{
+			"id": 5,
+			"img": "/database/ever_classic.jpg",
+			"name": "Вечная классика",
+			"price": 450,
+			"weight": 450,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "burger"
+		},
+		{
+			"id": 6,
+			"img": "/database/Italian.jpg",
+			"name": "Итальянский",
+			"price": 560,
+			"weight": 510,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "burger"
+		},
+		{
+			"id": 7,
+			"img": "/database/homemade_hot_dog.jpg",
+			"name": "Домашний хот-дог",
+			"price": 290,
+			"weight": 250,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "hot-dog"
+		},
+		{
+			"id": 8,
+			"img": "/database/burning_hot_dog.jpg",
+			"name": "Жгучий хот-дог",
+			"price": 239,
+			"weight": 245,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "hot-dog"
+		},
+		{
+			"id": 9,
+			"img": "/database/classic_hot_dog.jpg",
+			"name": "Классический хот-дог",
+			"price": 220,
+			"weight": 215,
+			"description" : "",
+			"composition": "",
+			"kcal": 0,
+			"type": "hot-dog"
+		}
+	]
+}

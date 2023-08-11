@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Basket = () => {
   return (
-    <aside className="float-left w-[300px] mt-[122px]  pt-6 pl-4 pr-4 bg-[#FFF]">
+    <aside className="float-left w-[300px] mt-[122px]   pt-6 pl-4 pr-4 bg-[#FFF]">
       <div className="flex justify-between items-center">
         <h2 className="text-black text-2xl font-semibold leading-normal NunitoFont">
           Корзина
