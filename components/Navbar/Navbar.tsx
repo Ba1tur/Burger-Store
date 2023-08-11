@@ -1,8 +1,24 @@
 import { navigationNavbar } from "@/constants/navbar";
+import { Context, SortProductContextType } from "@/hooks/context";
+import { productAPI } from "@/services/ProductService";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 
 const Navbar = () => {
+  const { sortProduct, setSortProduct } = useContext(
+    Context
+  ) as SortProductContextType;
+
+  const {} = productAPI.useFetchProductByIdQuery(sortProduct);
+
+  const handleItemClick = (newValue: string) => {
+    if (typeof setSortProduct === "function") {
+      setSortProduct(newValue);
+    }
+  };
+
+  const a = false;
+
   return (
     <nav className="containers">
       <ul className="w-full pt-7 flex gap-6 justify-center">
@@ -10,7 +26,10 @@ const Navbar = () => {
           return (
             <li
               key={item.id}
-              className="w-[126px] h-10 rounded-[58px] flex items-center justify-center gap-2 bg-[#FFAB08]"
+              onClick={() => handleItemClick(item.value)}
+              className={`w-[126px] h-10 rounded-[58px] flex items-center transition-colors justify-center gap-2  ${
+                item.value === sortProduct ? `bg-[#FFAB08]` : `bg-[#FFF]`
+              } `}
             >
               <Image
                 src={item.icon}
