@@ -21,6 +21,9 @@ export const BasketSlice = createSlice({
 	initialState,
 	reducers: {
 		AddProduct: (state , action: PayloadAction<IProduct>) => {
+			if(state.basket.some((item) => item.name === action.payload.name)) {
+				return alert('Bro bruh')
+			}
 			state.basket.push(action.payload)
 		},
 		DeleteProduct: (state , action: PayloadAction<number | undefined | string>) => {

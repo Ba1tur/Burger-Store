@@ -4,7 +4,6 @@ import { BasketSlice } from '@/redux/reducers/BasketSlice';
 import Image from 'next/image';
 import React from 'react';
 
-
 type Props = {
 	basket : IProduct
 }
@@ -16,7 +15,7 @@ const BasketCard = ({basket} : Props) => {
 	const dispatch = useAppDispatch()
 
 	return (
-		<div className='w-full h-[89px] flex justify-between relative  items-center'>
+				<div className='w-full h-[89px] flex justify-between relative  items-center'>
 			<Image src={basket.img} alt='burger_cheese.jpg' className='rounded-lg h-[60px]'  width={64} height={60}/>
 			<div className='ml-[7px]'>
 				<h5 className='text-black text-xs font-normal NunitoFont'>{basket.name}</h5>
@@ -33,8 +32,8 @@ const BasketCard = ({basket} : Props) => {
 				<button className="text-black text-base font-normal NunitoFont">-</button>
 				<span className="text-black text-base font-normal NunitoFont">{basket.count}</span>
 				<button className="text-black text-base font-normal NunitoFont">+</button>
-			</div>
-		</div>
+				</div>
+			</div>		
 	);
 };
 
