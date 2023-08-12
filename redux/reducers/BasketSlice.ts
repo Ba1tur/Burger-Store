@@ -22,9 +22,10 @@ export const BasketSlice = createSlice({
 	reducers: {
 		AddProduct: (state , action: PayloadAction<IProduct>) => {
 			if(state.basket.some((item) => item.name === action.payload.name)) {
-				return alert('Bro bruh')
+				state.error = "Бро сори"
+			} else {
+				state.basket.push(action.payload)
 			}
-			state.basket.push(action.payload)
 		},
 		DeleteProduct: (state , action: PayloadAction<number | undefined | string>) => {
 			state.basket = state.basket.filter((item) => item.id !== action.payload)
