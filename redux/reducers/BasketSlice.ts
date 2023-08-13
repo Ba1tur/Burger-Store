@@ -30,6 +30,19 @@ export const BasketSlice = createSlice({
 		DeleteProduct: (state , action: PayloadAction<number | undefined | string>) => {
 			state.basket = state.basket.filter((item) => item.id !== action.payload)
 		},
+		Increment: (state , action: PayloadAction<number>) => {
+
+			const product = state.basket.find((item) => item.id === action.payload)
+			if(product){
+				product.count++;
+			}
+		},
+		Decrement: (state , action : PayloadAction<number>) => {
+			const product = state.basket.find((item) => item.id === action.payload)
+			if (product && product.count > 0) {
+				product.count--;
+			 }
+		}
 	},
 	extraReducers: {}
 })

@@ -1,5 +1,5 @@
 export interface IProduct {
-  id?: number;
+  id: number;
   img: string;
   name: string;
   price: number;
@@ -8,5 +8,5 @@ export interface IProduct {
   composition?: string;
   kcal?: number;
   type?: string;
-  count?: number; 
+  count: number; 
 }
