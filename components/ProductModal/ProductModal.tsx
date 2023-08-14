@@ -17,7 +17,7 @@ const ProductModal = ({product , handleAddToCart , count , setCount}: Props) => 
 
   return (
     <div className="w-full h-[392px] bg-white">
-      <h1 className="text-black text-[40px] font-semibold leading-10 pt-1 NunitoFont">
+      <h1 className="text-black text-[40px] font-semibold leading-10 pt-1 whitespace-nowrap NunitoFont">
         {product.name}
       </h1>
       <div className="flex gap-4 mt-6">
@@ -66,7 +66,7 @@ const ProductModal = ({product , handleAddToCart , count , setCount}: Props) => 
         </div>
 
         <p className="text-black text-2xl font-semibold leading-loose NunitoFont">
-          {product.price}
+          {product.price}₽
         </p>
       </div>
     </div>

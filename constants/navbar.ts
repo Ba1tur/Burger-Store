@@ -12,6 +12,7 @@ export const navigationNavbar : InavigatioNavbar[] = [
 		id: 2,
 		name: 'Закуски',
 		icon: '/snacks.svg',
+		value: "snacks"
 	},
 	{
 		id: 3,
@@ -23,15 +24,18 @@ export const navigationNavbar : InavigatioNavbar[] = [
 		id: 4,
 		name: 'Шаурма',
 		icon: '/shawarma.svg',
+		value: "shawarma"
 	},
 	{
 		id: 5,
 		name: 'Пицца',
 		icon: '/pizza.svg',
+		value: "pizza"
 	},
 	{
 		id: 6,
 		name: 'Десерты',
 		icon: '/dessert.svg',
+		value: "decert"
 	},
 ]

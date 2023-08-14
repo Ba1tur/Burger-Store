@@ -4,26 +4,21 @@ import Image from "next/image";
 import { useAppSelector } from "@/hooks/redux";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import CountUp from "react-countup";
-import { message } from "antd";
 
 const Basket = () => {
-  const { basket , error} = useAppSelector((state) => state.basketReducer);
+  const { basket } = useAppSelector((state) => state.basketReducer);
 
   const [prevTotal, setPrevTotal] = useState(0);
   const [currentTotal, setCurrentTotal] = useState(0);
-  const [messageApi, contextHolder] = message.useMessage();
 
-  const errors = () => {
-    messageApi.open({
-      type: "error",
-      content: "This is an error message",
-    });
-  };
+  console.log(basket);
+  
 
+  
   useEffect(() => {
     const initialValue = 0;
     const sumWithInitial = basket.reduce(
-      (accumulator, currentValue) => accumulator + currentValue.price,
+      (accumulator, currentValue ) => accumulator + currentValue.price,
       initialValue
     );
 
@@ -33,7 +28,6 @@ const Basket = () => {
 
   return (
     <>
-      {contextHolder}
       <aside className="float-left w-[300px]  mt-[122px]  pt-6 pl-4 pr-4 bg-[#FFF]">
         <div className="flex justify-between items-center">
           <h2 className="text-black text-2xl font-semibold leading-normal NunitoFont">
@@ -72,13 +66,14 @@ const Basket = () => {
             Итого
           </div>
           <div className="text-right text-black text-base font-normal leading-tight NunitoFont">
-            <CountUp
+            {/* <CountUp
               start={prevTotal}
               end={currentTotal}
               duration={1}
               separator=" "
               decimal="2"
-            />
+            /> */}
+            <p>{currentTotal}</p>
             ₽
           </div>
         </div>

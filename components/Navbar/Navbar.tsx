@@ -11,13 +11,12 @@ const Navbar = () => {
 
   const {} = productAPI.useFetchProductByIdQuery(sortProduct);
 
-  const handleItemClick = (newValue: string) => {
+  const handleItemClick = (newValue: string | undefined) => {
     if (typeof setSortProduct === "function") {
       setSortProduct(newValue);
     }
   };
 
-  const a = false;
 
   return (
     <nav className="containers">
