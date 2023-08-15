@@ -15,7 +15,7 @@ const BasketCard = ({ basket }: Props) => {
 
   return (
     <div className="w-full h-[89px] flex justify-between relative  items-center">
-      <div className="flex w-20  gap-2">
+      <div className="flex w-21 h-[89px]  gap-2">
         <Image
           src={basket.img}
           alt="burger_cheese.jpg"
@@ -23,8 +23,8 @@ const BasketCard = ({ basket }: Props) => {
           width={64}
           height={60}
         />
-			<div className="">
-				 <h5 className="text-black text-xs w-full font-normal NunitoFont">
+		  	<div className="">
+				 <h5 className="text-black text-xs w-full font-normal whitespace-nowrap NunitoFont">
           {basket.name}
         </h5>
         <span className="text-zinc-400 text-xs font-normal NunitoFont">

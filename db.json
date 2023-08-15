@@ -224,12 +224,144 @@
       "id": 21,
       "img": "/database/free.jpg",
       "name": "Картошка фри",
-      "price": 100,
-      "weight": 180,
+      "price": 150,
+      "weight": 200,
       "description": "Ароматные картофельные фри, идеальная закуска к главному блюду.",
       "composition": "Картофель, специи",
       "kcal": 220,
       "type": "snacks"
+    },
+	 {
+      "id": 22,
+      "img": "/database/medovi-cake.jpg",
+      "name": "Медовый тортик",
+      "price": 350,
+      "weight": 450,
+      "description": "Нежный медовый торт с уникальным вкусом и ароматом.",
+      "composition": "Тесто, мед, сливочное масло, сахар, яйца",
+      "kcal": 320,
+      "type": "desserts"
+    },
+    {
+      "id": 23,
+      "img": "/database/napalion-cake.jpg",
+      "name": "Наполеон тортик",
+      "price": 280,
+      "weight": 380,
+      "description": "Изысканный торт Наполеон с тонкими слоями заварного крема.",
+      "composition": "Тесто слоеное, заварной крем, сахар, ваниль",
+      "kcal": 260,
+      "type": "desserts"
+    },
+    {
+      "id": 24,
+      "img": "/database/moti.jpg",
+      "name": "Моти",
+      "price": 120,
+      "weight": 150,
+      "description": "Традиционные моти — японские рисовые пирожки с начинкой.",
+      "composition": "Рис, начинка (фрукты, бобы, сыр), водоросли",
+      "kcal": 180,
+      "type": "desserts"
+    },
+    {
+      "id": 25,
+      "img": "/database/snickers-cake.jpg",
+      "name": "Сникерс тортик",
+      "price": 320,
+      "weight": 420,
+      "description": "Торт на основе популярного шоколада Сникерс с орехами и карамелью.",
+      "composition": "Шоколадный бисквит, орехи, карамель, сливки",
+      "kcal": 380,
+      "type": "desserts"
+    },
+    {
+      "id": 26,
+      "img": "/database/blean.jpg",
+      "name": "Блинчики",
+      "price": 80,
+      "weight": 200,
+      "description": "Сладкие и нежные блинчики с разнообразными начинками.",
+      "composition": "Тесто, начинка (творог, варенье, фрукты), масло",
+      "kcal": 240,
+      "type": "desserts"
+    },
+    {
+      "id": 27,
+      "img": "/database/kruassan.jpg",
+      "name": "Круассан",
+      "price": 100,
+      "weight": 150,
+      "description": "Воздушные круассаны — идеальное дополнение к чашке кофе.",
+      "composition": "Слоеное тесто, масло, начинка (шоколад, варенье)",
+      "kcal": 180,
+      "type": "desserts"
+    },
+	 {
+      "id": 28,
+      "img": "/database/pizza-asian.jpg",
+      "name": "Пицца азиатская",
+      "price": 490,
+      "weight": 520,
+      "description": "Вкуснейшая азиатская пицца с необычными ингредиентами.",
+      "composition": "Тесто, соус терияки, куринное филе, овощи, сыр",
+      "kcal": 420,
+      "type": "pizza"
+    },
+    {
+      "id": 29,
+      "img": "/database/pizza-cheese.jpg",
+      "name": "Пицца сырная",
+      "price": 380,
+      "weight": 480,
+      "description": "Пицца с множеством видов сыра для настоящих ценителей.",
+      "composition": "Тесто, моцарелла, пармезан, дор блю, гауда",
+      "kcal": 360,
+      "type": "pizza"
+    },
+    {
+      "id": 30,
+      "img": "/database/pizza-kebab.jpg",
+      "name": "Пицца кебаб",
+      "price": 520,
+      "weight": 540,
+      "description": "Пицца с куриной кебаб начинкой и томатным соусом.",
+      "composition": "Тесто, соус томатный, куринный кебаб, овощи, сыр",
+      "kcal": 450,
+      "type": "pizza"
+    },
+    {
+      "id": 31,
+      "img": "/database/pizza-meat.jpg",
+      "name": "Пицца мясная",
+      "price": 450,
+      "weight": 490,
+      "description": "Сочетание разных видов мяса делает эту пиццу незабываемой.",
+      "composition": "Тесто, говядина, свинина, колбаса, бекон, соус барбекю",
+      "kcal": 420,
+      "type": "pizza"
+    },
+    {
+      "id": 32,
+      "img": "/database/pizza-mexican.jpg",
+      "name": "Пицца мексиканская",
+      "price": 490,
+      "weight": 530,
+      "description": "Острая и ароматная пицца в мексиканском стиле.",
+      "composition": "Тесто, соус сальса, фасоль, перец чили, кукуруза, сыр",
+      "kcal": 390,
+      "type": "pizza"
+    },
+    {
+      "id": 33,
+      "img": "/database/pizza-peperoni.jpg",
+      "name": "Пицца пепперони",
+      "price": 420,
+      "weight": 470,
+      "description": "Классическая пицца с острой пепперони и сыром.",
+      "composition": "Тесто, соус томатный, пепперони, моцарелла, базилик",
+      "kcal": 380,
+      "type": "pizza"
     }
   ]
 }

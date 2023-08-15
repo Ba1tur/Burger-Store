@@ -20,7 +20,7 @@ export const BasketSlice = createSlice({
   reducers: {
     AddProduct: (state, action: PayloadAction<IProduct>) => {
       if (state.basket.some((item) => item.name === action.payload.name)) {
-        toast.error("🍔 Продукт уже есть  в корзине", {
+        toast.error("❌ Продукт уже есть  в корзине", {
           position: "top-right",
         });
       } else {
@@ -50,8 +50,19 @@ export const BasketSlice = createSlice({
         
       }
     },
+    ClearBasket: (state) => {
+      if(state.basket.length <= 0){
+        toast.error("❌ Корзина и так пуста" , {
+          position: "top-right"
+        })
+      }else{
+        state.basket = []
+        toast.success("🧺 Корзина стала пуста ", {
+          position: "top-right",
+        });
+      }
+    }
   },
-  extraReducers: {},
 });
 
 export default BasketSlice.reducer;

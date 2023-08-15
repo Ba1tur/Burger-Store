@@ -1,30 +1,44 @@
 import React, { useState, useEffect } from "react";
 import BasketCard from "../BasketCard/BasketCard";
 import Image from "next/image";
-import { useAppSelector } from "@/hooks/redux";
+import { useAppDispatch, useAppSelector } from "@/hooks/redux";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import CountUp from "react-countup";
+import { Modal } from "antd";
+import { BasketSlice } from "@/redux/reducers/BasketSlice";
+import OrderModal from "../OrderModal/OrderModal";
 
 const Basket = () => {
   const { basket } = useAppSelector((state) => state.basketReducer);
-
   const [prevTotal, setPrevTotal] = useState(0);
   const [currentTotal, setCurrentTotal] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  console.log(basket);
-  
+  const dispatch = useAppDispatch();
 
-  
+  const { ClearBasket } = BasketSlice.actions;
+
   useEffect(() => {
     const initialValue = 0;
     const sumWithInitial = basket.reduce(
-      (accumulator, currentValue ) => accumulator + currentValue.price,
+      (accumulator, currentValue) =>
+        accumulator + currentValue.price * currentValue.count,
       initialValue
     );
 
     setPrevTotal(currentTotal);
     setCurrentTotal(sumWithInitial);
   }, [basket]);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const statusBtn = basket.length <= 0 ? true : false;
 
   return (
     <>
@@ -37,7 +51,12 @@ const Basket = () => {
             {basket.length}
           </div>
         </div>
-
+        <button
+          onClick={() => dispatch(ClearBasket())}
+          className="mt-1 rounded-xl bg-zinc-100 h-9 text-[12px] text-black  font-medium p-2 leading-normal NunitoFont"
+        >
+          Очистить корзину
+        </button>
         <div className="pt-3 h-[380px]  w-full overflow-y-scroll">
           {basket.length <= 0 ? (
             <h4 className="text-black text-base font-normal leading-tight NunitoFont">
@@ -66,20 +85,32 @@ const Basket = () => {
             Итого
           </div>
           <div className="text-right text-black text-base font-normal leading-tight NunitoFont">
-            {/* <CountUp
+            <CountUp
               start={prevTotal}
               end={currentTotal}
               duration={1}
               separator=" "
               decimal="2"
-            /> */}
-            <p>{currentTotal}</p>
+            />
             ₽
           </div>
         </div>
-        <button className="w-full mt-6 h-10 px-8 py-2.5 rounded-xl justify-center items-center gap-2.5 inline-flex text-white text-base font-normal NunitoFont leading-none bg-orange-500">
+        <button
+          onClick={() => showModal()}
+          disabled={statusBtn}
+          className="w-full mt-6 h-10 px-8 py-2.5 rounded-xl justify-center items-center gap-2.5 inline-flex text-white text-base font-normal NunitoFont leading-none bg-orange-500"
+        >
           Оформить заказ
         </button>
+        <Modal
+          width={684}
+          open={isModalOpen}
+          centered
+          footer={false}
+          onCancel={handleCancel}
+        >
+          <OrderModal />
+        </Modal>
         {currentTotal <= 599 ? (
           ""
         ) : (

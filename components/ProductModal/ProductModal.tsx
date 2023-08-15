@@ -64,7 +64,6 @@ const ProductModal = ({product , handleAddToCart , count , setCount}: Props) => 
             </button>
           </div>
         </div>
-
         <p className="text-black text-2xl font-semibold leading-loose NunitoFont">
           {product.price}₽
         </p>

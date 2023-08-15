@@ -6,7 +6,7 @@ export default function Home() {
 
 
   return (
-    <section className="containers mb-10 h-[900px] flex gap-11">
+    <section className="containers mb-10  flex gap-11">
       <Basket/>
       <Products/>
     </section>

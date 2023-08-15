@@ -36,6 +36,6 @@ export const navigationNavbar : InavigatioNavbar[] = [
 		id: 6,
 		name: 'Десерты',
 		icon: '/dessert.svg',
-		value: "decert"
+		value: "desserts"
 	},
 ]
