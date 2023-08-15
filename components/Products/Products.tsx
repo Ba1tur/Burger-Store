@@ -21,7 +21,7 @@ const Products = () => {
         </h1>
       )}
       {isLoading && <Loader></Loader>}
-      <div className="mt-6  grid grid-cols-1 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8">
+      <div className="mt-6  grid grid-cols-1 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-10 gap-y-8 xl:gap-x-10 lg:gap-x-[200px]">
         {products?.map((product) => {
           return <ProductCard key={product.id} product={product} />;
         })}

@@ -57,7 +57,7 @@ const Basket = () => {
         >
           Очистить корзину
         </button>
-        <div className="pt-3 h-[380px]  w-full overflow-y-scroll">
+        <div className="pt-3 h-[380px]  w-full overflow-y-scroll overflow-hidden">
           {basket.length <= 0 ? (
             <h4 className="text-black text-base font-normal leading-tight NunitoFont">
               Тут пока пусто :(
